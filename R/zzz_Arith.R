@@ -40,7 +40,7 @@ setMethod("+", signature(e1 = "antsImage", e2 = "antsImage"),
               stop("Images do not occupy the same physical space")
             }
             res = .Call("antsImageArithImageImage",
-                        e1, e2, "+", PACKAGE = "ANTsRCore")
+                        e1, e2, "+", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -53,7 +53,7 @@ setMethod("-", signature(e1 = "antsImage", e2 = "antsImage"),
               stop("Images do not occupy the same physical space")
             }
             res = .Call("antsImageArithImageImage",
-                        e1, e2, "-", PACKAGE = "ANTsRCore")
+                        e1, e2, "-", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -66,7 +66,7 @@ setMethod("*", signature(e1 = "antsImage", e2 = "antsImage"),
               stop("Images do not occupy the same physical space")
             }
             res = .Call("antsImageArithImageImage",
-                        e1, e2, "*", PACKAGE = "ANTsRCore")
+                        e1, e2, "*", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -79,7 +79,7 @@ setMethod("/", signature(e1 = "antsImage", e2 = "antsImage"),
               stop("Images do not occupy the same physical space")
             }
             res = .Call("antsImageArithImageImage",
-                        e1, e2, "/", PACKAGE = "ANTsRCore")
+                        e1, e2, "/", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -92,7 +92,7 @@ setMethod("^", signature(e1 = "antsImage", e2 = "antsImage"),
               stop("Images do not occupy the same physical space")
             }
             res = .Call("antsImageArithImageImage",
-                        e1, e2, "^", PACKAGE = "ANTsRCore")
+                        e1, e2, "^", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -105,7 +105,7 @@ setMethod("%%", signature(e1 = "antsImage", e2 = "antsImage"),
               stop("Images do not occupy the same physical space")
             }
             res = .Call("antsImageArithImageImage",
-                        e1, e2, "%%", PACKAGE = "ANTsRCore")
+                        e1, e2, "%%", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -118,7 +118,7 @@ setMethod("%/%", signature(e1 = "antsImage", e2 = "antsImage"),
               stop("Images do not occupy the same physical space")
             }
             res = .Call("antsImageArithImageImage",
-                        e1, e2, "%/%", PACKAGE = "ANTsRCore")
+                        e1, e2, "%/%", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -139,7 +139,7 @@ setMethod("Arith", signature(e1 = "antsImage", e2 = "numeric"),
 setMethod("+", signature(e1 = "antsImage", e2 = "numeric"),
           function(e1, e2) {
             res = .Call("antsImageArithImageNumeric",
-                        e1, e2, "+", PACKAGE = "ANTsRCore")
+                        e1, e2, "+", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -148,7 +148,7 @@ setMethod("+", signature(e1 = "antsImage", e2 = "numeric"),
 setMethod("-", signature(e1 = "antsImage", e2 = "numeric"),
           function(e1, e2) {
             res = .Call("antsImageArithImageNumeric",
-                        e1, e2, "-", PACKAGE = "ANTsRCore")
+                        e1, e2, "-", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -157,7 +157,7 @@ setMethod("-", signature(e1 = "antsImage", e2 = "numeric"),
 setMethod("*", signature(e1 = "antsImage", e2 = "numeric"),
           function(e1, e2) {
             res = .Call("antsImageArithImageNumeric",
-                        e1, e2, "*", PACKAGE = "ANTsRCore")
+                        e1, e2, "*", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -166,7 +166,7 @@ setMethod("*", signature(e1 = "antsImage", e2 = "numeric"),
 setMethod("/", signature(e1 = "antsImage", e2 = "numeric"),
           function(e1, e2) {
             res = .Call("antsImageArithImageNumeric",
-                        e1, e2, "/", PACKAGE = "ANTsRCore")
+                        e1, e2, "/", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -175,7 +175,7 @@ setMethod("/", signature(e1 = "antsImage", e2 = "numeric"),
 setMethod("^", signature(e1 = "antsImage", e2 = "numeric"),
           function(e1, e2) {
             res = .Call("antsImageArithImageNumeric",
-                        e1, e2, "^", PACKAGE = "ANTsRCore")
+                        e1, e2, "^", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -184,7 +184,7 @@ setMethod("^", signature(e1 = "antsImage", e2 = "numeric"),
 setMethod("%%", signature(e1 = "antsImage", e2 = "numeric"),
           function(e1, e2) {
             res = .Call("antsImageArithImageNumeric",
-                        e1, e2, "%%", PACKAGE = "ANTsRCore")
+                        e1, e2, "%%", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -193,7 +193,7 @@ setMethod("%%", signature(e1 = "antsImage", e2 = "numeric"),
 setMethod("%/%", signature(e1 = "antsImage", e2 = "numeric"),
           function(e1, e2) {
             res = .Call("antsImageArithImageNumeric",
-                        e1, e2, "%/%", PACKAGE = "ANTsRCore")
+                        e1, e2, "%/%", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -202,7 +202,7 @@ setMethod("%/%", signature(e1 = "antsImage", e2 = "numeric"),
 setMethod("+", signature(e1 = "numeric", e2 = "antsImage"),
           function(e1, e2) {
             res = .Call("antsImageArithNumericImage",
-                        e1, e2, "+", PACKAGE = "ANTsRCore")
+                        e1, e2, "+", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -211,7 +211,7 @@ setMethod("+", signature(e1 = "numeric", e2 = "antsImage"),
 setMethod("-", signature(e1 = "numeric", e2 = "antsImage"),
           function(e1, e2) {
             res = .Call("antsImageArithNumericImage",
-                        e1, e2, "-", PACKAGE = "ANTsRCore")
+                        e1, e2, "-", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -220,7 +220,7 @@ setMethod("-", signature(e1 = "numeric", e2 = "antsImage"),
 setMethod("*", signature(e1 = "numeric", e2 = "antsImage"),
           function(e1, e2) {
             res = .Call("antsImageArithNumericImage",
-                        e1, e2, "*", PACKAGE = "ANTsRCore")
+                        e1, e2, "*", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -229,7 +229,7 @@ setMethod("*", signature(e1 = "numeric", e2 = "antsImage"),
 setMethod("/", signature(e1 = "numeric", e2 = "antsImage"),
           function(e1, e2) {
             res = .Call("antsImageArithNumericImage",
-                        e1, e2, "/", PACKAGE = "ANTsRCore")
+                        e1, e2, "/", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -238,7 +238,7 @@ setMethod("/", signature(e1 = "numeric", e2 = "antsImage"),
 setMethod("^", signature(e1 = "numeric", e2 = "antsImage"),
           function(e1, e2) {
             res = .Call("antsImageArithNumericImage",
-                        e1, e2, "^", PACKAGE = "ANTsRCore")
+                        e1, e2, "^", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -247,7 +247,7 @@ setMethod("^", signature(e1 = "numeric", e2 = "antsImage"),
 setMethod("%%", signature(e1 = "numeric", e2 = "antsImage"),
           function(e1, e2) {
             res = .Call("antsImageArithNumericImage",
-                        e1, e2, "%%", PACKAGE = "ANTsRCore")
+                        e1, e2, "%%", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 
@@ -256,7 +256,7 @@ setMethod("%%", signature(e1 = "numeric", e2 = "antsImage"),
 setMethod("%/%", signature(e1 = "numeric", e2 = "antsImage"),
           function(e1, e2) {
             res = .Call("antsImageArithNumericImage",
-                        e1, e2, "%/%", PACKAGE = "ANTsRCore")
+                        e1, e2, "%/%", PACKAGE = "ANTsRCoreWin")
             return(res)
           })
 

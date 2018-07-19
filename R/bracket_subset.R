@@ -26,7 +26,7 @@ setMethod(
     mask <- logical(0)
     region <-
       new("antsRegion", index = integer(), size = integer())
-    return(.Call("antsImage_asVector", x, mask, region, PACKAGE = "ANTsRCore"))
+    return(.Call("antsImage_asVector", x, mask, region, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -45,7 +45,7 @@ setMethod(
       stop("'mask' provided is not of type 'logical'")
     }
     region <- new("antsRegion", index = integer(), size = integer())
-    return(.Call("antsImage_asVector", x, i, region, PACKAGE = "ANTsRCore"))
+    return(.Call("antsImage_asVector", x, i, region, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -81,7 +81,7 @@ setMethod(
   signature(x = "antsImage", i = "logical", j = "ANY", "ANY"),
   definition = function(x, i, j, ..., drop) {
     region <- new("antsRegion", index = integer(), size = integer())
-    return(.Call("antsImage_asVector", x, i, region, PACKAGE = "ANTsRCore"))
+    return(.Call("antsImage_asVector", x, i, region, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -92,7 +92,7 @@ setMethod(
   signature(x = "antsImage", i = "logical", j = "ANY"),
   definition = function(x, i, j, ..., drop) {
     region <- new("antsRegion", index = integer(), size = integer())
-    return(.Call("antsImage_asVector", x, i, region, PACKAGE = "ANTsRCore"))
+    return(.Call("antsImage_asVector", x, i, region, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -108,7 +108,7 @@ setMethod(
     }
     region <-
       new("antsRegion", index = integer(), size = integer())
-    return(.Call("antsImage_asVector", x, i, region, PACKAGE = "ANTsRCore"))
+    return(.Call("antsImage_asVector", x, i, region, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -123,7 +123,7 @@ setMethod(
     }
     region <-
       new("antsRegion", index = integer(), size = integer())
-    return(.Call("antsImage_asVector", x, i, region, PACKAGE = "ANTsRCore"))
+    return(.Call("antsImage_asVector", x, i, region, PACKAGE = "ANTsRCoreWin"))
   }
 )
 

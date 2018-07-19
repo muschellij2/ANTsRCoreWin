@@ -10,7 +10,7 @@
 }}
 \description{
 A data frame defining the git tag for the current
-ANTsRCore version of ANTs.
+ANTsRCoreWin version of ANTs.
 }
 \references{
 \url{https://github.com/stnava/ANTs}

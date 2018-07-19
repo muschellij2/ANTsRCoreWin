@@ -236,6 +236,6 @@ var.antsImage = function(x, ...) {
 #setMethod("abs", signature(e1 = "antsImage"),
 #          function(e1) {
 #            res = .Call("antsImageMath",
-#                        e1, "abs", PACKAGE = "ANTsRCore")
+#                        e1, "abs", PACKAGE = "ANTsRCoreWin")
 #            return(res)
 #          })

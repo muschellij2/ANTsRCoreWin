@@ -25,42 +25,42 @@ setMethod("Math", signature(x = "antsImage"),
 #' @export
 setMethod("abs", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "abs", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "abs", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("sign", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "sign", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "sign", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("sqrt", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "sqrt", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "sqrt", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("ceiling", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "ceiling", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "ceiling", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("floor", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "floor", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "floor", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("trunc", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "trunc", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "trunc", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
@@ -99,16 +99,16 @@ setMethod("trunc", signature(x = "antsImage"),
 setMethod("log", signature(x = "antsImage"),
           function(x, base=exp(1) ) {
             if ( base==exp(1) ) {
-              return(.Call("antsImageMath", x, "log", PACKAGE = "ANTsRCore"))
+              return(.Call("antsImageMath", x, "log", PACKAGE = "ANTsRCoreWin"))
             }
             else if ( base==2 ) {
-              return(.Call("antsImageMath", x, "log2", PACKAGE = "ANTsRCore"))
+              return(.Call("antsImageMath", x, "log2", PACKAGE = "ANTsRCoreWin"))
             }
             else if ( base==10 ) {
-              return(.Call("antsImageMath", x, "log10", PACKAGE = "ANTsRCore"))
+              return(.Call("antsImageMath", x, "log10", PACKAGE = "ANTsRCoreWin"))
             }
             else {
-              res=.Call("antsImageMath", x, "log10", PACKAGE = "ANTsRCore")
+              res=.Call("antsImageMath", x, "log10", PACKAGE = "ANTsRCoreWin")
               res = res/(log10(base))
               return(res)
             }
@@ -119,138 +119,138 @@ setMethod("log", signature(x = "antsImage"),
 #' @export
 setMethod("log10", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "log10", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "log10", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("log2", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "log2", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "log2", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("acos", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "acos", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "acos", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("asin", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "asin", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "asin", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("atan", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "atan", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "atan", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("acosh", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "acosh", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "acosh", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("asinh", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "asinh", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "asinh", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("atanh", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "atanh", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "atanh", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("cos", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "cos", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "cos", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("sin", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "sin", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "sin", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("tan", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "tan", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "tan", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("cosh", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "cosh", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "cosh", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("sinh", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "sinh", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "sinh", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("tanh", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "tanh", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "tanh", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("cospi", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "cospi", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "cospi", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("sinpi", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "sinpi", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "sinpi", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("tanpi", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "tanpi", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "tanpi", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("exp", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "exp", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "exp", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("gamma", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "gamma", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "gamma", PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname antsImagemath
 #' @export
 setMethod("lgamma", signature(x = "antsImage"),
           function(x) {
-            return(.Call("antsImageMath", x, "lgamma", PACKAGE = "ANTsRCore"))
+            return(.Call("antsImageMath", x, "lgamma", PACKAGE = "ANTsRCoreWin"))
           })

@@ -10,7 +10,7 @@
 #' @export antsDir
 antsDir <- function() {
   antsd<-paste( system.file("bin",
-    package="ANTsRCore"), sep="")
+    package="ANTsRCoreWin"), sep="")
   if ( ! file.exists(antsd) )
     print("antsDir: ants dir does not exist")
   cat( antsd )
@@ -28,7 +28,7 @@ antsDir <- function() {
 #' @export antsIncludes
 antsIncludes <- function() {
   antslocation<-paste( system.file("include",
-    package="ANTsRCore"),"/", sep="")
+    package="ANTsRCoreWin"),"/", sep="")
   if ( ! file.exists(antslocation) )
     print("antsIncludes: ants includes do not exist")
   cat( antslocation )
@@ -45,7 +45,7 @@ antsIncludes <- function() {
 #'
 #' @export antsLibs
 antsLibs <- function() {
-  antslibs <- paste( system.file("libs", package="ANTsRCore"), '/lib/', sep="")
+  antslibs <- paste( system.file("libs", package="ANTsRCoreWin"), '/lib/', sep="")
   if ( ! file.exists(antslibs) )
     print("antsLibs: ants libs do not exist")
   cat( antslibs )

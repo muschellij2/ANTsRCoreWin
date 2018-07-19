@@ -35,7 +35,7 @@ setMethod("&", signature(e1 = "antsImage", e2 = "antsImage"),
             }
             else {
               res = .Call("antsImageLogicImageImage",
-                          e1, e2, "&", PACKAGE = "ANTsRCore")
+                          e1, e2, "&", PACKAGE = "ANTsRCoreWin")
             }
             return(res)
           })
@@ -59,7 +59,7 @@ setMethod("|", signature(e1 = "antsImage", e2 = "antsImage"),
             }
             else {
               res = .Call("antsImageLogicImageImage",
-                          e1, e2, "|", PACKAGE = "ANTsRCore")
+                          e1, e2, "|", PACKAGE = "ANTsRCoreWin")
             }
             return(res)
           })
@@ -97,7 +97,7 @@ setMethod("&", signature(e1 = "antsImage", e2 = "logical"),
               res = (e1 != 0) & e2
             } else {
               res = .Call("antsImageLogicImageNumeric",
-                          e1, e2, "&", PACKAGE = "ANTsRCore")
+                          e1, e2, "&", PACKAGE = "ANTsRCoreWin")
             }
             return(res)
           })
@@ -113,7 +113,7 @@ setMethod("|", signature(e1 = "antsImage", e2 = "logical"),
               res = (e1 != 0) | e2
             } else {
               res = .Call("antsImageLogicImageNumeric",
-                          e1, e2, "|", PACKAGE = "ANTsRCore")
+                          e1, e2, "|", PACKAGE = "ANTsRCoreWin")
             }
             return(res)
           })

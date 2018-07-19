@@ -38,7 +38,7 @@ iMath <- function( img, operation, param=NA, ... ) {
     stop("operation must be a character string")
     }
 
-  data( "iMathOps", package="ANTsRCore", envir=environment() )
+  data( "iMathOps", package="ANTsRCoreWin", envir=environment() )
 
   if ( operation == "GetOperations" | operation == "GetOperationsFull")
     {

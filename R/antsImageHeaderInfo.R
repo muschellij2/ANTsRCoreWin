@@ -38,7 +38,7 @@ antsImageHeaderInfo <- function( filename )
     stop("File does not exist")
   }
 
-  ret =  .Call("antsImageHeaderInfo", filename, PACKAGE = "ANTsRCore")
+  ret =  .Call("antsImageHeaderInfo", filename, PACKAGE = "ANTsRCoreWin")
   return(ret)
 
 }

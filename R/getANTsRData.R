@@ -58,63 +58,63 @@ getANTsRData <- function(fileid,
   }
   
   if ( fileid == "simple" ) {
-    x = system.file("extdata", "simple.jpg", package="ANTsRCore")
-    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCore"),
+    x = system.file("extdata", "simple.jpg", package="ANTsRCoreWin")
+    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCoreWin"),
                                      "/extdata/simple.jpg",sep="")
     if ( nchar( x ) == 0 ) x = maketmpimg()
     return(  x  )
   }
   if ( fileid == "r16" ) {
-    x = system.file("extdata", "r16slice.jpg", package="ANTsRCore")
-    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCore"),
+    x = system.file("extdata", "r16slice.jpg", package="ANTsRCoreWin")
+    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCoreWin"),
                                      "/extdata/r16slice.jpg",sep="")
     if ( nchar( x ) == 0 ) x = maketmpimg()
     return(  x )
   }
   if ( fileid == "r27" ) {
-    x = system.file("extdata", "r27slice.jpg", package="ANTsRCore")
-    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCore"),
+    x = system.file("extdata", "r27slice.jpg", package="ANTsRCoreWin")
+    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCoreWin"),
                                      "/extdata/r27slice.jpg",sep="")
     if ( nchar( x ) == 0 ) x = maketmpimg()
     return(  x )
   }
   if ( fileid == "r30" ) {
-    x = system.file("extdata", "r30slice.jpg", package="ANTsRCore")
-    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCore"),
+    x = system.file("extdata", "r30slice.jpg", package="ANTsRCoreWin")
+    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCoreWin"),
                                      "/extdata/r30slice.jpg",sep="")
     if ( nchar( x ) == 0 ) x = maketmpimg()
     return(  x )
   }
   if ( fileid == "r62" ) {
-    x = system.file("extdata", "r62slice.jpg", package="ANTsRCore")
-    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCore"),
+    x = system.file("extdata", "r62slice.jpg", package="ANTsRCoreWin")
+    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCoreWin"),
                                      "/extdata/r62slice.jpg",sep="")
     if ( nchar( x ) == 0 ) x = maketmpimg()
     return(  x )
   }
   if ( fileid == "r64" ) {
-    x = system.file("extdata", "r64slice.jpg", package="ANTsRCore")
-    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCore"),
+    x = system.file("extdata", "r64slice.jpg", package="ANTsRCoreWin")
+    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCoreWin"),
                                      "/extdata/r64slice.jpg",sep="")
     if ( nchar( x ) == 0 ) x = maketmpimg()
     return(  x )
   }
   if ( fileid == "r85" ) {
-    x = system.file("extdata", "r85slice.jpg", package="ANTsRCore")
-    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCore"),
+    x = system.file("extdata", "r85slice.jpg", package="ANTsRCoreWin")
+    if ( nchar( x ) == 0 ) x = paste(path.package("ANTsRCoreWin"),
                                      "/extdata/r85slice.jpg",sep="")
     if ( nchar( x ) == 0 ) x = maketmpimg()
     return(  x )
   }
   if ( fileid == "rand" ) {
-    x = system.file("extdata", "rand.jpg", package="ANTsRCore")
+    x = system.file("extdata", "rand.jpg", package="ANTsRCoreWin")
     if ( nchar( x ) == 0 ) x = maketmpimg()
     return(  x )
   }
   
   if ( fileid == "multi_component_image") {
     fname = system.file("extdata", "multi_component_image.nii.gz", 
-                        package = "ANTsRCore")  
+                        package = "ANTsRCoreWin")  
     return(fname)
   }
   

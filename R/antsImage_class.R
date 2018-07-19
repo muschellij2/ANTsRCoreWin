@@ -5,14 +5,14 @@
 #'
 #' @slot index indices of the region
 #' @slot size size of the region
-#' @useDynLib ANTsRCoreWin
+#' @useDynLib ANTsRCoreWinWin
 #' @import Rcpp
 #' @import ITKR
 #' @import methods
 #' @import tools
 #' @import stats
 setClass(Class = "antsRegion", representation(index = "numeric", size = "numeric"))
-##### @useDynLib ANTsRCore, .registration = TRUE
+##### @useDynLib ANTsRCoreWin, .registration = TRUE
 
 
 #' An S4 class for an antsImage
@@ -62,7 +62,7 @@ setMethod(f = "show", "antsImage", function(object){
 setMethod(f = "initialize", signature(.Object = "antsImage"),
           definition = function(.Object,
                                 pixeltype = "float", dimension = 3, components = 1, isVector=FALSE) {
-            return(.Call("antsImage", pixeltype, dimension, components, PACKAGE = "ANTsRCore"))
+            return(.Call("antsImage", pixeltype, dimension, components, PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname as.array
@@ -70,7 +70,7 @@ setMethod(f = "initialize", signature(.Object = "antsImage"),
 #' @aliases dim,antsImage-method
 #' @export
 setMethod(f = "dim", signature(x = "antsImage"), definition = function(x) {
-  return(.Call("antsImage_dim", x, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_dim", x, PACKAGE = "ANTsRCoreWin"))
 })
 
 
@@ -80,7 +80,7 @@ setMethod(f = "dim", signature(x = "antsImage"), definition = function(x) {
 # #' @export
 #rm.antsImage <- function(x) {
 #  print("rm.antsImage(x)")
-#  a = .Call("antsImage_rm", x, PACKAGE = "ANTsRCore")
+#  a = .Call("antsImage_rm", x, PACKAGE = "ANTsRCoreWin")
 #  print("done with call to antsImage_rm")
 #  #x@pointer = NA
 #  rm(x)
@@ -100,7 +100,7 @@ setMethod(f = "dim", signature(x = "antsImage"), definition = function(x) {
 #' outimg<-makeImage( c(2,10) , 1)
 #' is.na(outimg)
 setMethod(f = "is.na", signature(x = "antsImage"), definition = function(x) {
-  val <- .Call("antsImage_isna", x, PACKAGE = "ANTsRCore")
+  val <- .Call("antsImage_isna", x, PACKAGE = "ANTsRCoreWin")
   if (val > 0) {
     return(TRUE)
   }
@@ -128,7 +128,7 @@ setMethod(f = "as.numeric", signature(x = "antsImage"),
             if (typeof(mask) != "logical") {
               stop("'mask' provided is not of type 'logical'")
             }
-            num = .Call("antsImage_asVector", x, mask, region, PACKAGE = "ANTsRCore")
+            num = .Call("antsImage_asVector", x, mask, region, PACKAGE = "ANTsRCoreWin")
             num = as.numeric(num)
             return(num)
           })
@@ -153,7 +153,7 @@ setMethod(f = "as.matrix", signature(x = "antsImage"),
             if (x@dimension != 2) {
               stop("image dimension must be 2")
             }
-            return(.Call("antsImage_asVector", x, mask, region, PACKAGE = "ANTsRCore"))
+            return(.Call("antsImage_asVector", x, mask, region, PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname as.array
@@ -170,7 +170,7 @@ as.matrix.antsImage = function(x, ...,
   if (x@dimension != 2) {
     stop("image dimension must be 2")
   }
-  return(.Call("antsImage_asVector", x, mask, region, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_asVector", x, mask, region, PACKAGE = "ANTsRCoreWin"))
 }
 
 #' @title Coerce antsImage objects to array
@@ -186,7 +186,7 @@ setMethod(f = "as.array", signature(x = "antsImage"),
             if (typeof(mask) != "logical") {
               stop("'mask' provided is not of type 'logical'")
             }
-            return(.Call("antsImage_asVector", x, mask, region, PACKAGE = "ANTsRCore"))
+            return(.Call("antsImage_asVector", x, mask, region, PACKAGE = "ANTsRCoreWin"))
           })
 
 #' @rdname as.array
@@ -205,7 +205,7 @@ as.array.antsImage = function(x, ..., mask = logical(),
   if (typeof(mask) != "logical") {
     stop("'mask' provided is not of type 'logical'")
   }
-  return(.Call("antsImage_asVector", x, mask, region, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_asVector", x, mask, region, PACKAGE = "ANTsRCoreWin"))
 }
 
 #' @rdname as.array
@@ -295,7 +295,7 @@ getPixels <- function(x, i = NA, j = NA, k = NA, l = NA) {
       stop("indices must be of class 'integer' or 'numeric'")
     }
   }
-  return(.Call("antsImage_GetPixels", x, lst, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_GetPixels", x, lst, PACKAGE = "ANTsRCoreWin"))
 }
 
 #' @title antsImageGetSet
@@ -327,7 +327,7 @@ antsGetSpacing <- function(x) {
     stop("Input must be of class 'antsImage'")
   }
   
-  return(.Call("antsImage_GetSpacing", x, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_GetSpacing", x, PACKAGE = "ANTsRCoreWin"))
 }
 #' @rdname antsImageGetSet
 #' @param spacing numeric vector of length \code{d}.
@@ -345,7 +345,7 @@ antsSetSpacing <- function(x, spacing) {
     stop("spacing must be of same dimensions as image")
   }
   
-  return(.Call("antsImage_SetSpacing", x, spacing, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_SetSpacing", x, spacing, PACKAGE = "ANTsRCoreWin"))
 }
 
 #' @rdname antsImageGetSet
@@ -355,7 +355,7 @@ antsGetOrigin <- function(x) {
   if (class(x)[1] != "antsImage") {
     stop("Input must be of class 'antsImage'")
   }
-  return(.Call("antsImage_GetOrigin", x, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_GetOrigin", x, PACKAGE = "ANTsRCoreWin"))
 }
 #' @rdname antsImageGetSet
 #' @usage antsSetOrigin(x, origin)
@@ -373,11 +373,11 @@ antsSetOrigin <- function(x, origin) {
     stop("spacing must be of same dimensions as image")
   }
   
-  # res = .Call("antsImage_SetOrigin", x, origin, PACKAGE = "ANTsRCore")
+  # res = .Call("antsImage_SetOrigin", x, origin, PACKAGE = "ANTsRCoreWin")
   # if (res != 0) {
   #   warning("Setting origin did not have result 0, results may be wrong")
   # }
-  return(.Call("antsImage_SetOrigin", x, origin, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_SetOrigin", x, origin, PACKAGE = "ANTsRCoreWin"))
 }
 
 #' @rdname antsImageGetSet
@@ -392,7 +392,7 @@ antsGetDirection <- function(x) {
   if (class(x)[1] != "antsImage") {
     stop("Input must be of class 'antsImage'")
   }
-  return(.Call("antsImage_GetDirection", x, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_GetDirection", x, PACKAGE = "ANTsRCoreWin"))
 }
 
 #' @rdname antsImageGetSet
@@ -417,7 +417,7 @@ antsSetDirection <- function(x, direction) {
   if ((dim(direction)[1] != length(dim(x))) || (dim(direction)[2] != length(dim(x)))) {
     stop("direction matrix must be of size imagedim * imagedim")
   }
-  return(.Call("antsImage_SetDirection", x, direction, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_SetDirection", x, direction, PACKAGE = "ANTsRCoreWin"))
 }
 
 
@@ -481,7 +481,7 @@ getNeighborhoodAtVoxel <- function(image, center, kernel, physical.coordinates =
   }
   
   return(.Call("antsImage_GetNeighborhood", image, center, kernel, radius,
-               physical.coordinates, PACKAGE="ANTsRCore"))
+               physical.coordinates, PACKAGE="ANTsRCoreWin"))
 }
 
 
@@ -642,7 +642,7 @@ antsTransformIndexToPhysicalPoint <- function(x, index) {
     stop(paste("Index matrix must be of size N x", imgdim))
   }
   
-  return(.Call("antsImage_TransformIndexToPhysicalPoint", x, index, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_TransformIndexToPhysicalPoint", x, index, PACKAGE = "ANTsRCoreWin"))
 }
 
 
@@ -684,7 +684,7 @@ antsTransformPhysicalPointToIndex <- function(x, point) {
     stop(paste("Point matrix must be of size N x", imgdim))
   }
   
-  return(.Call("antsImage_TransformPhysicalPointToIndex", x, point, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_TransformPhysicalPointToIndex", x, point, PACKAGE = "ANTsRCoreWin"))
 }
 
 
@@ -747,7 +747,7 @@ antsSetPixels <- function(x, i = NA, j = NA, k = NA, l = NA, value) {
       stop("indices must be of class 'integer' or 'numeric'")
     }
   }
-  returnList <- (.Call("antsImage_SetPixels", x, lst, value, PACKAGE = "ANTsRCore"))
+  returnList <- (.Call("antsImage_SetPixels", x, lst, value, PACKAGE = "ANTsRCoreWin"))
   
   if ( returnList$flag > 0 ) {
     warning( returnList$error )
@@ -795,7 +795,7 @@ setMethod(f = "as.antsImage", signature(object = "matrix"), definition = functio
     origin = antsGetOrigin(reference)[seq_len(ndim)]
     direction = antsGetDirection(reference)
   }
-  return(.Call("antsImage_asantsImage", object, pixeltype, spacing, origin, direction, components, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_asantsImage", object, pixeltype, spacing, origin, direction, components, PACKAGE = "ANTsRCoreWin"))
 })
 
 #' @rdname as.antsImage
@@ -817,7 +817,7 @@ setMethod(f = "as.antsImage", signature(object = "array"), definition = function
     origin = antsGetOrigin(reference)[seq_len(ndim)]
     direction = antsGetDirection(reference)
   }
-  return(.Call("antsImage_asantsImage", object, pixeltype, spacing, origin, direction, components, PACKAGE = "ANTsRCore"))
+  return(.Call("antsImage_asantsImage", object, pixeltype, spacing, origin, direction, components, PACKAGE = "ANTsRCoreWin"))
 })
 
 #' @title is.antsImage

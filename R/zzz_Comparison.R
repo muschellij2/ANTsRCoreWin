@@ -81,7 +81,7 @@ setMethod("==", signature(e1 = "antsImage", e2 = "antsImage"),
             }
             res = .Call("antsImageComparisonImageImage", 
                         e1, e2, 
-                        operator, PACKAGE = "ANTsRCore")
+                        operator, PACKAGE = "ANTsRCoreWin")
             return(res)
 
           })
@@ -122,7 +122,7 @@ setMethod("==", signature(e1 = "antsImage", e2 = "ANY"),
               e2 = as.numeric(e2)
               res = .Call("antsImageComparisonImageNumeric", 
                           e1, e2, 
-                          operator, PACKAGE = "ANTsRCore")  
+                          operator, PACKAGE = "ANTsRCoreWin")  
               return(res)
             }
             a1 = as.array(e1)
@@ -157,7 +157,7 @@ setMethod(">", signature(e1 = "antsImage", e2 = "antsImage"),
             }
             res = .Call("antsImageComparisonImageImage", 
                         e1, e2, 
-                        operator, PACKAGE = "ANTsRCore")
+                        operator, PACKAGE = "ANTsRCoreWin")
             return(res)
 
           })
@@ -198,7 +198,7 @@ setMethod(">", signature(e1 = "antsImage", e2 = "ANY"),
               e2 = as.numeric(e2)
               res = .Call("antsImageComparisonImageNumeric", 
                           e1, e2, 
-                          operator, PACKAGE = "ANTsRCore")  
+                          operator, PACKAGE = "ANTsRCoreWin")  
               return(res)
             }
             a1 = as.array(e1)
@@ -233,7 +233,7 @@ setMethod("<", signature(e1 = "antsImage", e2 = "antsImage"),
             }
             res = .Call("antsImageComparisonImageImage", 
                         e1, e2, 
-                        operator, PACKAGE = "ANTsRCore")
+                        operator, PACKAGE = "ANTsRCoreWin")
             return(res)
 
           })
@@ -274,7 +274,7 @@ setMethod("<", signature(e1 = "antsImage", e2 = "ANY"),
               e2 = as.numeric(e2)
               res = .Call("antsImageComparisonImageNumeric", 
                           e1, e2, 
-                          operator, PACKAGE = "ANTsRCore")  
+                          operator, PACKAGE = "ANTsRCoreWin")  
               return(res)
             }
             a1 = as.array(e1)
@@ -309,7 +309,7 @@ setMethod("!=", signature(e1 = "antsImage", e2 = "antsImage"),
             }
             res = .Call("antsImageComparisonImageImage", 
                         e1, e2, 
-                        operator, PACKAGE = "ANTsRCore")
+                        operator, PACKAGE = "ANTsRCoreWin")
             return(res)
 
           })
@@ -350,7 +350,7 @@ setMethod("!=", signature(e1 = "antsImage", e2 = "ANY"),
               e2 = as.numeric(e2)
               res = .Call("antsImageComparisonImageNumeric", 
                           e1, e2, 
-                          operator, PACKAGE = "ANTsRCore")  
+                          operator, PACKAGE = "ANTsRCoreWin")  
               return(res)
             }
             a1 = as.array(e1)
@@ -385,7 +385,7 @@ setMethod("<=", signature(e1 = "antsImage", e2 = "antsImage"),
             }
             res = .Call("antsImageComparisonImageImage", 
                         e1, e2, 
-                        operator, PACKAGE = "ANTsRCore")
+                        operator, PACKAGE = "ANTsRCoreWin")
             return(res)
 
           })
@@ -426,7 +426,7 @@ setMethod("<=", signature(e1 = "antsImage", e2 = "ANY"),
               e2 = as.numeric(e2)
               res = .Call("antsImageComparisonImageNumeric", 
                           e1, e2, 
-                          operator, PACKAGE = "ANTsRCore")  
+                          operator, PACKAGE = "ANTsRCoreWin")  
               return(res)
             }
             a1 = as.array(e1)
@@ -461,7 +461,7 @@ setMethod(">=", signature(e1 = "antsImage", e2 = "antsImage"),
             }
             res = .Call("antsImageComparisonImageImage", 
                         e1, e2, 
-                        operator, PACKAGE = "ANTsRCore")
+                        operator, PACKAGE = "ANTsRCoreWin")
             return(res)
 
           })
@@ -502,7 +502,7 @@ setMethod(">=", signature(e1 = "antsImage", e2 = "ANY"),
               e2 = as.numeric(e2)
               res = .Call("antsImageComparisonImageNumeric", 
                           e1, e2, 
-                          operator, PACKAGE = "ANTsRCore")  
+                          operator, PACKAGE = "ANTsRCoreWin")  
               return(res)
             }
             a1 = as.array(e1)

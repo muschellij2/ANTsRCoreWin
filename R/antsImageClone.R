@@ -33,11 +33,11 @@ antsImageClone <- function(in_image, out_pixeltype = in_image@pixeltype) {
     mychanns <- splitChannels( in_image )
     for ( k in 1:length(mychanns) )
     {
-      img.clone <- .Call("antsImageClone", mychanns[[k]], out_pixeltype, PACKAGE = "ANTsRCore")
+      img.clone <- .Call("antsImageClone", mychanns[[k]], out_pixeltype, PACKAGE = "ANTsRCoreWin")
       mychanns[[k]] <- img.clone
     }
     return( mergeChannels( mychanns ) )
   }
   
-  .Call("antsImageClone", in_image, out_pixeltype, PACKAGE = "ANTsRCore")
+  .Call("antsImageClone", in_image, out_pixeltype, PACKAGE = "ANTsRCoreWin")
 }

@@ -14,7 +14,7 @@ setMethod(
     region <-
       new("antsRegion", index = integer(), size = integer())
     return(.Call("antsImage_SetRegion", x, mask, 
-                 region, value, PACKAGE = "ANTsRCore"))
+                 region, value, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -33,7 +33,7 @@ setMethod(
   definition = function(x, i, j, ..., value) {
     region <- new("antsRegion", index = integer(), size = integer())
     return(.Call("antsImage_SetRegion", x, 
-                 i, region, value, PACKAGE = "ANTsRCore"))
+                 i, region, value, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -68,7 +68,7 @@ setMethod(
     region <-
       new("antsRegion", index = integer(), size = integer())
     return(.Call("antsImage_SetRegion", x, 
-                 i, region, value, PACKAGE = "ANTsRCore"))
+                 i, region, value, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -91,7 +91,7 @@ setMethod(
     region <-
       new("antsRegion", index = integer(), size = integer())
     return(.Call("antsImage_SetRegion", x, 
-                 i, region, value, PACKAGE = "ANTsRCore"))
+                 i, region, value, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -110,7 +110,7 @@ setMethod(
       stop("'region' provided is not of class 'antsRegion'")
     }
     return(.Call("antsImage_SetRegion", x, 
-                 i$mask, i$region, value, PACKAGE = "ANTsRCore"))
+                 i$mask, i$region, value, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -127,7 +127,7 @@ setMethod(
       i = antsImageClone(i, out_pixeltype="unsigned char")
     }
     return(.Call("antsImage_SetByImage", 
-                 x, i, value, PACKAGE = "ANTsRCore"))
+                 x, i, value, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -140,7 +140,7 @@ setMethod(
   definition = function(x, i, j, ..., value) {
     mask <- logical(0)
     return(.Call("antsImage_SetRegion", 
-                 x, mask, j, value, PACKAGE = "ANTsRCore"))
+                 x, mask, j, value, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -151,7 +151,7 @@ setMethod(
   signature(x = "antsImage", i = "logical", j = "antsRegion"),
   definition = function(x, i, j, ..., value) {
     return(.Call("antsImage_SetRegion", 
-                 x, i, j, value, PACKAGE = "ANTsRCore"))
+                 x, i, j, value, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -166,7 +166,7 @@ setMethod(
       stop("'mask' provided is not of type 'logical'")
     }
     return(.Call("antsImage_SetRegion", 
-                 x, i, j, value, PACKAGE = "ANTsRCore"))
+                 x, i, j, value, PACKAGE = "ANTsRCoreWin"))
   }
 )
 
@@ -180,7 +180,7 @@ setMethod(
       stop("'mask' provided is not of type 'logical'")
     }
     return(.Call("antsImage_SetRegion", 
-                 x, i, j, value, PACKAGE = "ANTsRCore"))
+                 x, i, j, value, PACKAGE = "ANTsRCoreWin"))
   }
 )
 

@@ -53,6 +53,6 @@ antsImageRead <- function(filename, dimension = NULL, pixeltype = "float") {
   }
 
   tryCatch( rval <- (.Call("antsImageRead", filename, pixeltype,
-    dimension, components, PACKAGE = "ANTsRCore")), error = function(e) return(NA))
+    dimension, components, PACKAGE = "ANTsRCoreWin")), error = function(e) return(NA))
   return(rval)
 }

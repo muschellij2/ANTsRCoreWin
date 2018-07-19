@@ -42,5 +42,5 @@ antsImageWrite <- function(image, filename) {
     image@components = as.integer(1)
     }
   filename <- path.expand(filename)
-  invisible(.Call("antsImageWrite", image, filename, PACKAGE = "ANTsRCore"))
+  invisible(.Call("antsImageWrite", image, filename, PACKAGE = "ANTsRCoreWin"))
 }
