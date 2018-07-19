@@ -5,10 +5,6 @@ setMethod(f = ".int_antsExtractXptrAsString", signature = c("antsImage"), defini
   return(as.character(c(object@pointer)))
 })
 
-#' @aliases .int_antsExtractXptrAsString,antsMatrix-method
-setMethod(f = ".int_antsExtractXptrAsString", signature = c("antsMatrix"), definition = function(object) {
-  return(as.character(c(object@pointer)))
-})
 
 #' @aliases .int_antsExtractXptrAsString,numeric-method
 setMethod(f = ".int_antsExtractXptrAsString", signature = c("numeric"), definition = function(object) {
