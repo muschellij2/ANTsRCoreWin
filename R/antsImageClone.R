@@ -28,16 +28,16 @@ antsImageClone <- function(in_image, out_pixeltype = in_image@pixeltype) {
     if (dim(in_image)[1] == 1)
       return(NULL)
   
-  if (in_image@components > 1) 
-  {
-    mychanns <- splitChannels( in_image )
-    for ( k in 1:length(mychanns) )
-    {
-      img.clone <- .Call("antsImageClone", mychanns[[k]], out_pixeltype, PACKAGE = "ANTsRCoreWin")
-      mychanns[[k]] <- img.clone
-    }
-    return( mergeChannels( mychanns ) )
-  }
-  
+  # if (in_image@components > 1) 
+  # {
+  #   mychanns <- splitChannels( in_image )
+  #   for ( k in 1:length(mychanns) )
+  #   {
+  #     img.clone <- .Call("antsImageClone", mychanns[[k]], out_pixeltype, PACKAGE = "ANTsRCoreWin")
+  #     mychanns[[k]] <- img.clone
+  #   }
+  #   return( mergeChannels( mychanns ) )
+  # }
+  # 
   .Call("antsImageClone", in_image, out_pixeltype, PACKAGE = "ANTsRCoreWin")
 }

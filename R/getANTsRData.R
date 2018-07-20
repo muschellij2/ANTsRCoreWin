@@ -174,30 +174,30 @@ getANTsRData <- function(fileid,
   {
     download.file( myurl, tfn, method = method )
   }
-  if ( fileid == "fmrinetworks" )
-  {
-    inms = c(
-      "IFG_middle_temporal",
-      "anterior_cingulate_precun","auditory",
-      "default", "left_executive",
-      "left_right_exec_combined_network",
-      "motor", "parietal_association_cortex",
-      "posterior_default","right_executive",
-      "salience","supplementary_motor","visual")
-    selinds = c(4,1,2,3,6,7,8,11,12,13)
-    unzip( tfn , exdir = tdir )
-    flist = Sys.glob( paste(tdir,"/rsfmrinetwork_*nii.gz",sep='') )
-    ilist = imageFileNames2ImageList( flist )
-    if ( verbose )
-    {
-      lochelp="Map the mni template to your image then transform these
-      network files to the individual space.\n"
-      cat( lochelp )
-    }
-    return( list(
-      networkNames=inms[selinds],
-      images=ilist[selinds] ) )
-  }
+  # if ( fileid == "fmrinetworks" )
+  # {
+  #   inms = c(
+  #     "IFG_middle_temporal",
+  #     "anterior_cingulate_precun","auditory",
+  #     "default", "left_executive",
+  #     "left_right_exec_combined_network",
+  #     "motor", "parietal_association_cortex",
+  #     "posterior_default","right_executive",
+  #     "salience","supplementary_motor","visual")
+  #   selinds = c(4,1,2,3,6,7,8,11,12,13)
+  #   unzip( tfn , exdir = tdir )
+  #   flist = Sys.glob( paste(tdir,"/rsfmrinetwork_*nii.gz",sep='') )
+  #   ilist = imageFileNames2ImageList( flist )
+  #   if ( verbose )
+  #   {
+  #     lochelp="Map the mni template to your image then transform these
+  #     network files to the individual space.\n"
+  #     cat( lochelp )
+  #   }
+  #   return( list(
+  #     networkNames=inms[selinds],
+  #     images=ilist[selinds] ) )
+  # }
   if ( fileid == "surf" | fileid == "blob" |fileid == "ADNI" | fileid == "K1" |
        fileid == "nki" ) {
     return(tfn)
